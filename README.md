@@ -1,5 +1,11 @@
 # pytest-execution-timer
 
+[![PyPI current version](https://img.shields.io/pypi/v/pytest-execution-timer.svg)](https://pypi.python.org/pypi/pytest-execution-timer)
+[![Python Support](https://img.shields.io/pypi/pyversions/pytest-execution-timer.svg)](https://pypi.python.org/pypi/pytest-execution-timer)
+[![Tests](https://github.com/miketheman/pytest-execution-timer/workflows/Python%20Tests/badge.svg)](https://github.com/miketheman/pytest-execution-timer/actions?query=workflow%3A%22Python+Tests%22)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/miketheman/pytest-execution-timer/main.svg)](https://results.pre-commit.ci/latest/github/miketheman/pytest-execution-timer/main)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 A plugin to use with Pytest to measure execution time of tests.
 
 Distinctly different from the `--durations` option of pytest,
