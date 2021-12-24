@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "pytest-execution-timer"
+version = "0.1.0"
+description = "A timer for the phases of Pytest's execution."
+authors = ["Mike Fiedler <miketheman@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://pypi.org/project/pytest-execution-timer/"
+repository = "https://github.com/miketheman/pytest-execution-timer"
+include = [
+    { path = "LICENSE" },
+    { path = "README.md" },
+    { path = "tests", format = "sdist" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+coverage = {extras = ["toml"], version = "^6.2"}
+
+[tool.poetry.plugins.pytest11]
+execution_timer = "pytest_execution_timer.plugin"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/miketheman/pytest-execution-timer/issues"
+
+[tool.coverage.run]
+branch = true
+source = ["pytest_execution_timer"]
+
+[tool.isort]
+# https://black.readthedocs.io/en/stable/guides/using_black_with_other_tools.html#profilegcm
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
