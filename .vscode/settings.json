@@ -3,5 +3,6 @@
         "tests"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "python.pythonPath": "~/.pyenv/versions/3.10.1/bin/python"
 }

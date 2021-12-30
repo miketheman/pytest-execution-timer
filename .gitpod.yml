@@ -1,7 +1,14 @@
 tasks:
   - init: |
-      pyenv update
-      pyenv install $(cat .python-version)
-      pip install poetry
+      pyenv update && pyenv install $(cat .python-version)
+      pip install --upgrade pip
+      pip install poetry pre-commit
       poetry config virtualenvs.create false
       poetry install
+      pre-commit install
+
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - editorconfig.editorconfig
+    - ms-python.python
