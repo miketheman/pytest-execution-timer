@@ -1,0 +1,7 @@
+tasks:
+  - init: |
+      pyenv update
+      pyenv install $(cat .python-version)
+      pip install poetry
+      poetry config virtualenvs.create false
+      poetry install
