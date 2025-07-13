@@ -22,6 +22,7 @@ class PytestExecutionTimer:
     # https://docs.pytest.org/en/stable/reference.html#initialization-hooks
     @pytest.hookimpl(hookwrapper=True, tryfirst=True)
     def pytest_sessionstart(self, session):
+        del session
         start = time.time()
         yield
         end = time.time()
@@ -31,6 +32,7 @@ class PytestExecutionTimer:
     # https://docs.pytest.org/en/stable/reference.html#collection-hooks
     @pytest.hookimpl(hookwrapper=True, tryfirst=True)
     def pytest_collection(self, session):
+        del session
         start = time.time()
         yield
         end = time.time()
@@ -38,6 +40,7 @@ class PytestExecutionTimer:
 
     @pytest.hookimpl(hookwrapper=True, tryfirst=True)
     def pytest_collect_file(self, path, parent):
+        del parent
         start = time.time()
         yield
         end = time.time()
@@ -56,6 +59,7 @@ class PytestExecutionTimer:
     def pytest_runtestloop(self, session):
         """Should mimic the output of the total test time reported by pytest.
         May not be necessary."""
+        del session
         start = time.time()
         yield
         end = time.time()

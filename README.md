@@ -20,7 +20,7 @@ Leverages `pytest` hooks to measure execution time of phases.
 Requires:
 
 - Python 3.7 or later.
-- Pytest 6.2 or later.
+- Pytest 7.0 or later.
 
 Install the plugin with any approach for your project.
 
